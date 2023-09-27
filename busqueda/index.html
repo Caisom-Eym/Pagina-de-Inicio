@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/icon/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+</head>
+<body>
+    <section class="configuration-modal-bg" id="modal-bg">
+        <div class="configuration-modal-close" id="modal-close"></div>
+        <div class="configuration-modal" id="modal">
+            
+            <h4 class="h4-modal">Configuración del Fondo</h4>
+            
+            <label for="input-file" class="label">
+                <span class="text-modal-bg">Cambiar Imagen de Fondo</span>
+                <span class="text-modal-bg text-btn">Cambiar</span>
+            </label>
+                <span class="text-modal-bg text-btn" id="img-bg-none">Quitar</span>
+            <br>
+            <span class="text-modal-bg">Cambiar Color</span>
+            <input type="color" class="input-color-bg" id="input-color-bg" value="#ffffff">
+            <br>
+            <span class="text-modal-bg">Cambiar Tamaño</span>
+            <select id="size">
+                <option value="cover">Contenedor</option>
+                <option value="contain">Contenido</option>
+            </select>
+            <br>
+            <span class="text-modal-bg">Cambiar Posición en X</span>
+            <select id="positionX">
+                <option value="center">Centro</option>
+                <option value="right">Derecha</option>
+                <option value="left">Izquierda</option>
+            </select>
+            <br>
+            <span class="text-modal-bg">Cambiar Posición en Y</span>
+            <select id="positionY">
+                <option value="center">Centro</option>
+                <option value="top">Arriba</option>
+                <option value="bottom">Abajo</option>
+            </select>
+            <br>
+            <span class="text-modal-bg">Repetir</span>
+            <select id="repeat">
+                <option value="no-repeat">No repetir</option>
+                <option value="repeat">Repetir</option>
+            </select>
+            <br>
+            <hr>
+
+            <h4 class="h4-modal">Configuración de Fuente</h4>
+            
+            <span class="text-modal-bg">Tamaño de Fuente</span>
+            <input type="range" id="range-font" class="range-font" min="10" max="30" value="16">
+            <br>
+            <span class="text-modal-bg">Estilo de Fuente</span>            
+            <select id="select-font">
+                <option value="'Times New Roman'">Times New Roman</option>
+                <option value="sans-serif">sans-serif</option>
+                <option value="'Segoe UI'">Segoe UI</option>
+            </select>
+            <br>
+            <hr>
+
+            <h4 class="h4-modal">Configuración de Notas</h4>
+
+            <span class="text-modal-bg">Borrar Notas</span>
+            <span class="text-modal-bg text-btn" id="delete-notes">Borrar</span>
+            
+        </div>
+    </section>
+    <header class="header">
+        <div class="user circle-head"></div>
+        <div class="config circle-head" id="config-btn">
+            <svg viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.42 2H4.58L1.152 8l3.428 6h6.84l3.428-6-3.428-6zM4.58 1a1 1 0 0 0-.868.504l-3.429 6a1 1 0 0 0 0 .992l3.429 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.428-6a1 1 0 0 0 0-.992l-3.428-6A1 1 0 0 0 11.42 1H4.58z"/>
+                <path fill-rule="evenodd" d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33zM5.067 9.848a3.5 3.5 0 1 1 6.062-3.5 3.5 3.5 0 0 1-6.062 3.5z"/>
+            </svg>
+        </div>
+    </header>
+    <div class="search">        
+        <div class="search-text-container">
+            <input type="text" id="search-text" class="search-text" placeholder="Buscar" autocomplete="off">
+        </div>
+        <button id="search-btn" class="search-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"></path>
+            </svg>
+        </button>
+        <div class="select">
+            <button id="select-text" class="select-btn active">Texto</button>
+            <button id="select-img"  class="select-btn">Imagen</button>
+        </div>
+    </div>
+    <div class="relleno"></div>
+    <footer class="footer">
+        <span id="create-note" class="text-btn">crear nota</span>
+    </footer>
+    
+    <!-- display: none -->
+    <input type="file" name="form2" id="input-file" style="display: none;">
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
